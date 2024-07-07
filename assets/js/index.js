@@ -8,8 +8,8 @@ const getMoneda = async (monedaValue) => {
 
 const graficoMoneda = async (series) => {
   console.log(series);
-  const monto = (series.map = (serie) => serie.valor);
-  const fecha = (series.map = (serie) => serie.fecha);
+  const monto = series.map = ((serie)=> serie.valor);
+  const fecha = series.map = ((serie)=> serie.fecha);
 
   const ctx = document.getElementById("myChart");
 
@@ -29,7 +29,7 @@ const graficoMoneda = async (series) => {
 };
 
 btnBuscar.addEventListener("click", async () => {
-  let grafico = Chart.getchart("mychart");
+  let grafico = Chart.getChart("mychart");
   if (grafico !== undefined) {
     grafico.destroy();
   }
