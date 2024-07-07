@@ -17,20 +17,20 @@
         <div class="content" class="d-flex justify-content-center"">
             <div class="text-center">
                 <h1 class="text-light">Pesos CLP</h1>
-                <input  type="number" class="form-control" placeholder="Ingrese el monto CLP" >
+                <input id="input" type="number" class="form-control" placeholder="Ingrese el monto CLP" >
                 <div id="emailHelp" class="form-text"><span class="h5 text-light">Moneda a convertir</span></div>
-                    <select name="" id="Seleccione moneda" class="form-control">
+                    <select  name="" id="moneda" class="form-control">
                         <option selected>Seleccione la moneda</option>
                         <option value="Dolar">Dolar</option>
-                        <option value="Uf">uf</option>
-                        <option value="Euro">Euro</option>
+                        <option value="uf">Uf</option>
+                        <option value="euro">Euro</option>
                     </select>
                     <br>
                     <div class="d-grid gap-2 col-12 mx-auto">
-                        <button class="btn btn-primary" type="button">Buscar</button>
+                        <button id="buscar" class="btn btn-primary" type="button">Buscar</button>
                     </div>
                     <br>
-                    <p></p>
+                    <p id="resultado"></p>
             </div>  
         </div>
     </div>
