@@ -8,25 +8,30 @@ const getMoneda = async (monedaValue) => {
 
 const graficoMoneda = async (series) => {
   console.log(series);
-  const monto = series.map = ((serie)=> serie.valor);
-  const fecha = series.map = ((serie)=> serie.fecha);
+  const monto = (series.map = (serie) => serie.valor);
+  const fecha_actual = (series.map = (serie) => serie.fecha);
 
-  const ctx = document.getElementById("myChart");
+  const ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
-    type: "line",
+    type: 'line',
     data: {
-      labels: fecha,
-      datasets: [
-        {
-          label: "# of Votes",
-          data: monto,
-          borderWidth: 1,
-        },
-      ],
+      labels: fecha_actual,
+      datasets: [{
+        label: '# of Votes',
+        data: monto,
+        borderWidth: 1
+      }]
     },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
   });
-};
+}
 
 btnBuscar.addEventListener("click", async () => {
   let grafico = Chart.getChart("mychart");
@@ -37,7 +42,7 @@ btnBuscar.addEventListener("click", async () => {
   const inputValue = document.querySelector("#input").value;
   const monedaValue = document.querySelector("#moneda").value;
   const respuesta = await getMoneda(monedaValue);
-  console.log(respuesta.serie[0].valor);
+
   let tipoCambio = respuesta.serie[0].valor * inputValue;
 
   graficoMoneda(respuesta.serie);
