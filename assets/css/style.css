@@ -26,9 +26,9 @@
 .chart{
     width: 100%;
     max-width: 50em;
-    background-color: #158ac5;
+    background-color: #ffffff;
     position: absolute;
-    transform: translate(-50%, 70%);
+    transform: translate(-50%, 80%);
     left: 50%;
     top: 50%;
     padding: 2.5em;
